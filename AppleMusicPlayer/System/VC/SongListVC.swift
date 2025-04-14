@@ -1,0 +1,64 @@
+//
+//  SongListVC.swift
+//  AppleMusicPlayer
+//
+//  Created by Karan Bodar on 14/04/25.
+//
+
+import UIKit
+struct Song {
+    let name: String
+    let albumName: String
+    let artistName: String
+    let imageName: String
+    let trackName: String
+}
+class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var song = [Song] ()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.register(UINib(nibName: "XIBCell1", bundle: nil), forCellReuseIdentifier: "XIBCell1")
+        self.configureSong()
+    }
+// MARK: - TableView -
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.song.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "XIBCell1") as! XIBCell1
+        let song = song[indexPath.row]
+        // Cell Properties
+        cell.txtLabel?.text = song.name
+        cell.txtDetailsLabel?.text = song.albumName
+        cell.imgView?.image = UIImage(named: song.imageName)
+        cell.accessoryType = .disclosureIndicator
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        // Present Player
+        let position = indexPath.row
+        // Songs
+        guard let vc = storyboard?.instantiateViewController(identifier: "PlayerVC") as? PlayerVC else {
+            return
+                }
+        vc.songs = song
+        vc.position = position
+        present(vc, animated: true)
+    }
+// MARK: - Functions -
+    func configureSong() {
+        self.song.append(Song(name: "Millioner", albumName: "Glory", artistName: "Yoyo Honey Singh", imageName: "YoyoHoneySingh", trackName: "Millioner"))
+        self.song.append(Song(name: "Payal", albumName: "Glory", artistName: "Peradox", imageName: "Paradox", trackName: "Payal"))
+        self.song.append(Song(name: "GoodBoy", albumName: "Glory", artistName: "Emiway Batai", imageName: "Emiway", trackName: "GoodBoy"))
+        self.song.append(Song(name: "BigDawgs", albumName: "None", artistName: "Hanumankind", imageName: "Hnumankind", trackName: "BigDawgs"))
+    }
+}

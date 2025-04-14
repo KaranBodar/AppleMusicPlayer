@@ -22,6 +22,11 @@
                             <constraint firstAttribute="width" constant="50" id="FoT-3q-YGg"/>
                             <constraint firstAttribute="height" constant="50" id="blX-3M-cM2"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xe2-QS-vvw">
                         <rect key="frame" x="78" y="5" width="52" height="24"/>
@@ -54,6 +59,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="imgView" destination="jEG-hz-D6Z" id="yvc-L4-U2F"/>
                 <outlet property="txtDetailsLabel" destination="dgw-aG-9Hd" id="lmG-nT-8G6"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2559D3092DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2559D3072DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift */; };
+		2559D30A2DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2559D3082DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib */; };
 		25EDB4F82DAD09750028684C /* Payal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EDB4F72DAD09750028684C /* Payal.mp3 */; };
 		25EDB4F92DAD09750028684C /* Millioner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EDB4F62DAD09750028684C /* Millioner.mp3 */; };
 		25EDB4FA2DAD09750028684C /* GoodBoy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EDB4F42DAD09750028684C /* GoodBoy.mp3 */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2559D3072DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBArtistCollectionCell.swift; sourceTree = "<group>"; };
+		2559D3082DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBArtistCollectionCell.xib; sourceTree = "<group>"; };
 		25EDB4F42DAD09750028684C /* GoodBoy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GoodBoy.mp3; sourceTree = "<group>"; };
 		25EDB4F52DAD09750028684C /* BigDawgs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BigDawgs.mp3; sourceTree = "<group>"; };
 		25EDB4F62DAD09750028684C /* Millioner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Millioner.mp3; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 			children = (
 				25F4FE682DACF2C6007F90F9 /* LaunchScreen.storyboard */,
 				25F4FE6A2DACF2C6007F90F9 /* Main.storyboard */,
+				2559D3072DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift */,
+				2559D3082DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib */,
 				25EDB5022DAD1E900028684C /* XIBCell1.swift */,
 				25EDB5032DAD1E900028684C /* XIBCell1.xib */,
 			);
@@ -310,6 +316,7 @@
 			files = (
 				25F4FE6F2DACF2C6007F90F9 /* Assets.xcassets in Resources */,
 				25EDB5052DAD1E900028684C /* XIBCell1.xib in Resources */,
+				2559D30A2DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib in Resources */,
 				25F4FE712DACF2C6007F90F9 /* LaunchScreen.storyboard in Resources */,
 				25EDB4F82DAD09750028684C /* Payal.mp3 in Resources */,
 				25EDB4F92DAD09750028684C /* Millioner.mp3 in Resources */,
@@ -344,6 +351,7 @@
 				25F4FE742DACF2C6007F90F9 /* AppleMusicPlayer.xcdatamodeld in Sources */,
 				25F4FE812DACF2E6007F90F9 /* CornerRadius_Border_Gradient.swift in Sources */,
 				25F4FE752DACF2C6007F90F9 /* SceneDelegate.swift in Sources */,
+				2559D3092DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift in Sources */,
 				25F4FE762DACF2C6007F90F9 /* ViewController.swift in Sources */,
 				25EDB5042DAD1E900028684C /* XIBCell1.swift in Sources */,
 				25EDB4FD2DAD09FC0028684C /* SongListVC.swift in Sources */,
@@ -412,6 +420,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppleMusicPlayer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Music Player";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -439,6 +448,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppleMusicPlayer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Music Player";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

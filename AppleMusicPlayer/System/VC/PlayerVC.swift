@@ -5,41 +5,37 @@
 //  Created by Karan Bodar on 14/04/25.
 //
 
-import AVFoundation
 import UIKit
+import AVFoundation
 
 class PlayerVC: UIViewController {
-    //Outlets
-    @IBOutlet weak var holder: UIView!
+    // MARK: - IBOutlets -
     @IBOutlet weak var lblSongName: UILabel!
     @IBOutlet weak var lblAlbumName: UILabel!
     @IBOutlet weak var lblArtistName: UILabel!
     @IBOutlet weak var imgSongImage: UIImageView!
     @IBOutlet weak var VolumeControl: UISlider!
-
-    //Variables
+    @IBOutlet weak var SongProgressSlider: UISlider!
+    
+    
+    // MARK: - Variables -
     public var position: Int = 0
     public var songs: [Song] = []
     var player: AVAudioPlayer?
+    var progressTimer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.configure()
-//        let blurEffect = UIBlurEffect(style: .light)
-//        let blurView = UIVisualEffectView(effect: blurEffect)
-//        blurView.frame = self.holder.bounds
-//        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        self.holder.layer.cornerRadius = 25
-//        self.holder.clipsToBounds = true
-//        blurView.layer.cornerRadius = 25
-//        blurView.clipsToBounds = true
-//        self.holder.insertSubview(blurView, at: 0)
-//        self.holder.backgroundColor = UIColor.clear
+        self.imgSongImage.layer.cornerRadius = imgSongImage.frame.height / 2
     }
     // MARK: - IBActions -
-
+    
+    @IBAction func btnDissmis(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
     @IBAction func btnPreviousSong(_ sender: UIButton) {
         if self.position > 0 {
             self.position = self.position - 1
@@ -64,13 +60,38 @@ class PlayerVC: UIViewController {
         }
     }
     @IBAction func btnNextSong(_ sender: UIButton) {
-        if self.position < (self.songs.count - 1){
+        if self.position < (self.songs.count - 1) {
             self.position = self.position + 1
             self.loadSong()
         } else {
             print("No more songs.")
         }
     }
+    // MARK: - @objc functions -
+    @objc func didSlideSlider(_ slider: UISlider) {
+        let value = slider.value
+        player?.volume = value
+    }
+    @objc func updateSlider() {
+        guard let player = player else { return }
+        SongProgressSlider.maximumValue = Float(player.duration)
+        SongProgressSlider.value = Float(player.currentTime)
+    }
+    @objc func didSlideProgress(_ slider: UISlider) {
+        player?.currentTime = TimeInterval(slider.value)
+    }
+
+    // MARK: - override func -
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let player = player {
+            player.stop()
+            progressTimer?.invalidate()
+
+        }
+    }
+    //MARK: - Functions -
     func configure() {
         //SetUp Player
         let song = songs[position]
@@ -84,17 +105,17 @@ class PlayerVC: UIViewController {
             return
         }
         print("Found audio file at: \(urlString)")
-
+        
         do {
             try AVAudioSession.sharedInstance().setMode(.default)
-            try AVAudioSession.sharedInstance().setActive(
-                true /*, options: .notifyOthersOnDeactivation*/
-            )
-
+            try AVAudioSession.sharedInstance().setActive(true)
+            
             let url = URL(fileURLWithPath: urlString)
             player = try AVAudioPlayer(contentsOf: url)
             player?.volume = 0.5
             player?.play()
+            progressTimer?.invalidate()
+            progressTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
         } catch {
             print("Failed to initialize player: \(error.localizedDescription)")
         }
@@ -105,66 +126,46 @@ class PlayerVC: UIViewController {
         self.imgSongImage.image = UIImage(named: song.imageName)
         self.VolumeControl.value = 0.5
         self.VolumeControl.addTarget(
-            self,
-            action: #selector(didSlideSlider(_:)),
-            for: .valueChanged
-        )
-
-        //Configure UserInteraction Buttons
-        //        self.btnPlayPause.addTarget(self, action: #selector(didTapPlayPause), for: .touchUpInside)
-        //        self.btnNextSong.addTarget(self, action: #selector(didTapNextSong), for: .touchUpInside)
-        //        self.btnPreviousSong.addTarget(self, action: #selector(didTapPreviousSong), for: .touchUpInside)
+        self,action: #selector(didSlideSlider(_:)),for: .valueChanged)
+        SongProgressSlider.maximumValue = Float(player?.duration ?? 1.0)
+        SongProgressSlider.value = 0.0
+        SongProgressSlider.addTarget(self, action: #selector(didSlideProgress(_:)), for: .valueChanged)
     }
-    // MARK: - @objc functions -
-    @objc func didSlideSlider(_ slider: UISlider) {
-        let value = slider.value
-        player?.volume = value
-    }
-    //    @objc func didTapNextSong() {
-    //
-    //    }
-    //    @objc func didTapPreviousSong() {
-    //
-    //    }
-    //    @objc func didTapPlayPause() {
-    //
-    //    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        if let player = player {
-            player.stop()
-        }
-    }
-//MARK: - Functions -
+    
     func loadSong() {
-        // Stop current player if playing
+        // Stop previous
         player?.stop()
+        progressTimer?.invalidate()
         
         let song = songs[position]
         guard let path = Bundle.main.path(forResource: song.trackName, ofType: "mp3") else {
             print("Audio file not found")
             return
         }
-        
+
         do {
             let url = URL(fileURLWithPath: path)
             player = try AVAudioPlayer(contentsOf: url)
             player?.volume = VolumeControl.value
             player?.prepareToPlay()
+            player?.play()
+
+            // Timer for slider sync
+            progressTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
+
         } catch {
             print("Error loading player.")
             return
         }
-        // Update UI elements
+
+        // Update UI
         lblSongName.text = song.name
         lblAlbumName.text = song.albumName
         lblArtistName.text = song.artistName
         imgSongImage.image = UIImage(named: song.imageName)
-        
-        // Starts to play new song automaticaly
-        self.player?.play()
-        
+        SongProgressSlider.maximumValue = Float(player?.duration ?? 1.0)
+        SongProgressSlider.value = 0.0
     }
 
+    
 }

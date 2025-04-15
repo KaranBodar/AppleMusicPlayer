@@ -14,20 +14,22 @@ struct Song {
     let trackName: String
 }
 class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    // MARK: - IBOutlets -
     @IBOutlet var tableView: UITableView!
     
+    // MARK: - Variables -
     var song = [Song] ()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "XIBCell1", bundle: nil), forCellReuseIdentifier: "XIBCell1")
         self.configureSong()
     }
-// MARK: - TableView -
+    // MARK: - TableView -
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.song.count
     }
@@ -39,7 +41,6 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.txtLabel?.text = song.name
         cell.txtDetailsLabel?.text = song.albumName
         cell.imgView?.image = UIImage(named: song.imageName)
-        cell.accessoryType = .disclosureIndicator
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -47,14 +48,17 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Present Player
         let position = indexPath.row
         // Songs
-        guard let vc = storyboard?.instantiateViewController(identifier: "PlayerVC") as? PlayerVC else {
+        guard let vc = storyboard?.instantiateViewController(identifier: "PlayerVC") as? PlayerVC
+        else {
             return
-                }
+        }
         vc.songs = song
         vc.position = position
+        vc.modalPresentationStyle = .overCurrentContext
+        //        vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true)
     }
-// MARK: - Functions -
+    // MARK: - Functions -
     func configureSong() {
         self.song.append(Song(name: "Millioner", albumName: "Glory", artistName: "Yoyo Honey Singh", imageName: "YoyoHoneySingh", trackName: "Millioner"))
         self.song.append(Song(name: "Payal", albumName: "Glory", artistName: "Peradox", imageName: "Paradox", trackName: "Payal"))

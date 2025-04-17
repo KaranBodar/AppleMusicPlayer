@@ -16,6 +16,8 @@ class PlayerVC: UIViewController {
     @IBOutlet weak var imgSongImage: UIImageView!
     @IBOutlet weak var VolumeControl: UISlider!
     @IBOutlet weak var SongProgressSlider: UISlider!
+    @IBOutlet weak var lblCurrentTime: UILabel!
+    @IBOutlet weak var lblDuration: UILabel!
     
     
     // MARK: - Variables -
@@ -74,9 +76,14 @@ class PlayerVC: UIViewController {
     }
     @objc func updateSlider() {
         guard let player = player else { return }
+
         SongProgressSlider.maximumValue = Float(player.duration)
         SongProgressSlider.value = Float(player.currentTime)
+        
+        lblCurrentTime.text = formatTime(player.currentTime)
+        lblDuration.text = formatTime(player.duration)
     }
+    
     @objc func didSlideProgress(_ slider: UISlider) {
         player?.currentTime = TimeInterval(slider.value)
     }
@@ -130,6 +137,8 @@ class PlayerVC: UIViewController {
         SongProgressSlider.maximumValue = Float(player?.duration ?? 1.0)
         SongProgressSlider.value = 0.0
         SongProgressSlider.addTarget(self, action: #selector(didSlideProgress(_:)), for: .valueChanged)
+        lblCurrentTime.text = "0:00"
+        lblDuration.text = formatTime(player?.duration ?? 0.0)
     }
     
     func loadSong() {
@@ -165,7 +174,13 @@ class PlayerVC: UIViewController {
         imgSongImage.image = UIImage(named: song.imageName)
         SongProgressSlider.maximumValue = Float(player?.duration ?? 1.0)
         SongProgressSlider.value = 0.0
+        lblCurrentTime.text = "0:00"
+        lblDuration.text = formatTime(player?.duration ?? 0.0)
     }
-
+    func formatTime(_ time: TimeInterval) -> String {
+            let minutes = Int(time) / 60
+            let seconds = Int(time) % 60
+            return String(format: "%d:%02d", minutes, seconds)
+        }
     
 }

@@ -16,6 +16,7 @@ struct Song {
 class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - IBOutlets -
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var blureView: UIView!
     
     // MARK: - Variables -
     var song = [Song] ()
@@ -27,6 +28,7 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "XIBCell1", bundle: nil), forCellReuseIdentifier: "XIBCell1")
+        self.blureView.layer.opacity = 0.6
         self.configureSong()
     }
     // MARK: - TableView -

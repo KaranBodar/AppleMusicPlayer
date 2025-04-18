@@ -28,7 +28,9 @@ class LoginVC: UIViewController {
             self.present(alert, animated: true)
 
         } else {
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SongListVC")
+            email.set(true, forKey: "email")
+            password.set(true, forKey: "password")
+            let vc = UIStoryboard(name: "PlayList", bundle: nil).instantiateViewController(identifier: "SongListVC")
 //            self.navigationController?.pushViewController(vc, animated: true)
             self.navigationController?.setViewControllers( [vc], animated: true)
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251525B82DB26A4A00260204 /* PlayList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251525B72DB26A4900260204 /* PlayList.storyboard */; };
+		251525C02DB26CE200260204 /* FlashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251525BF2DB26CE200260204 /* FlashScreenVC.swift */; };
 		2559D3092DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2559D3072DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift */; };
 		2559D30A2DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2559D3082DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib */; };
 		256A65FC2DB10CD50040E594 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A65FB2DB10CD50040E594 /* MainVC.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251525B72DB26A4900260204 /* PlayList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayList.storyboard; sourceTree = "<group>"; };
+		251525BF2DB26CE200260204 /* FlashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashScreenVC.swift; sourceTree = "<group>"; };
 		2559D3072DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBArtistCollectionCell.swift; sourceTree = "<group>"; };
 		2559D3082DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBArtistCollectionCell.xib; sourceTree = "<group>"; };
 		256A65FB2DB10CD50040E594 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 			children = (
 				25F798932DB11C2E00BD7B7B /* LoginVC.swift */,
 				258D1BAE2DB11EC1004703B9 /* RegisterVC.swift */,
+				251525BF2DB26CE200260204 /* FlashScreenVC.swift */,
 				256A65FB2DB10CD50040E594 /* MainVC.swift */,
 				25F4FE6C2DACF2C6007F90F9 /* ViewController.swift */,
 				25EDB4FC2DAD09FC0028684C /* SongListVC.swift */,
@@ -183,6 +188,7 @@
 			children = (
 				25F4FE682DACF2C6007F90F9 /* LaunchScreen.storyboard */,
 				25F4FE6A2DACF2C6007F90F9 /* Main.storyboard */,
+				251525B72DB26A4900260204 /* PlayList.storyboard */,
 				2559D3072DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift */,
 				2559D3082DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib */,
 				25EDB5022DAD1E900028684C /* XIBCell1.swift */,
@@ -286,6 +292,7 @@
 				TargetAttributes = {
 					25F4FE2B2DACF270007F90F9 = {
 						CreatedOnToolsVersion = 16.3;
+						LastSwiftMigration = 1630;
 					};
 					25F4FE442DACF272007F90F9 = {
 						CreatedOnToolsVersion = 16.3;
@@ -329,6 +336,7 @@
 				25F4FE712DACF2C6007F90F9 /* LaunchScreen.storyboard in Resources */,
 				25EDB4F82DAD09750028684C /* Payal.mp3 in Resources */,
 				25EDB4F92DAD09750028684C /* Millioner.mp3 in Resources */,
+				251525B82DB26A4A00260204 /* PlayList.storyboard in Resources */,
 				25EDB4FA2DAD09750028684C /* GoodBoy.mp3 in Resources */,
 				25EDB4FB2DAD09750028684C /* BigDawgs.mp3 in Resources */,
 				25F4FE722DACF2C6007F90F9 /* Main.storyboard in Resources */,
@@ -366,6 +374,7 @@
 				25F4FE762DACF2C6007F90F9 /* ViewController.swift in Sources */,
 				25EDB5042DAD1E900028684C /* XIBCell1.swift in Sources */,
 				258D1BAF2DB11EC1004703B9 /* RegisterVC.swift in Sources */,
+				251525C02DB26CE200260204 /* FlashScreenVC.swift in Sources */,
 				25EDB4FD2DAD09FC0028684C /* SongListVC.swift in Sources */,
 				25EDB5072DAD20C10028684C /* PlayerVC.swift in Sources */,
 			);
@@ -428,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -446,6 +456,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.AppleMusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -456,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

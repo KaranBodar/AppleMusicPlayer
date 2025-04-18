@@ -6,7 +6,11 @@
 //
 
 import UIKit
-
+let name = UserDefaults.standard
+let mobileNo = UserDefaults.standard
+let email = UserDefaults.standard
+let password = UserDefaults.standard
+let confirmPassword = UserDefaults.standard
 class RegisterVC: UIViewController {
     // MARK: - IBOutlet -
     @IBOutlet weak var txtName: UITextField!
@@ -30,7 +34,12 @@ class RegisterVC: UIViewController {
             alert.addAction(ok)
             self.present(alert, animated: true)
         } else {
-            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SongListVC")
+            name.set(true, forKey: "name")
+            mobileNo.set(true, forKey: "mobileNo")
+            email.set(true, forKey: "email")
+            password.set(true, forKey: "password")
+            confirmPassword.set(true, forKey: "confirmPassword")
+            let vc = UIStoryboard(name: "PlayList", bundle: nil).instantiateViewController(identifier: "SongListVC")
 //            self.navigationController?.pushViewController(vc, animated: true)
             self.navigationController?.setViewControllers( [vc], animated: true)
         }

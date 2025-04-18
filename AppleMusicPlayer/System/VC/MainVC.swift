@@ -17,11 +17,11 @@ class MainVC: UIViewController {
     
     // MARK: - IBAction -
     @IBAction func clickLogIn(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "main", bundle: nil).instantiateViewController(identifier: "LogInVC")
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LoginVC")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func clickRegister(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "main", bundle: nil).instantiateViewController(identifier: "RegisterVC")
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "RegisterVC")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

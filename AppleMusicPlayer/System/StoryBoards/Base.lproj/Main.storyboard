@@ -400,6 +400,8 @@
                     <navigationItem key="navigationItem" id="VAD-5f-Q61"/>
                     <connections>
                         <outlet property="tableView" destination="usb-bY-xnj" id="eEB-PO-oqx"/>
+                        <outlet property="txtEmail" destination="43n-1o-ebA" id="NCc-Pf-g28"/>
+                        <outlet property="txtPassword" destination="zJE-x0-Chq" id="iRH-sv-7Vn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3p-On-kqE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -701,10 +703,10 @@
             </objects>
             <point key="canvasLocation" x="6004" y="-28.335832083958024"/>
         </scene>
-        <!--View Controller-->
+        <!--RegisterVC-->
         <scene sceneID="7KQ-LJ-hTz">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="xFW-0b-nZT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xFW-0b-nZT" customClass="RegisterVC" customModule="AppleMusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o6Q-d4-O9r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -750,6 +752,10 @@
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Cancle"/>
+                                <connections>
+                                    <action selector="clickCancle:" destination="xFW-0b-nZT" eventType="touchUpInside" id="eBR-Dx-qMU"/>
+                                    <action selector="clickRegister:" destination="xFW-0b-nZT" eventType="touchUpInside" id="4aN-AF-Xn8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pu-GU-gjy">
                                 <rect key="frame" x="20" y="537" width="335" height="35"/>
@@ -758,6 +764,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                <connections>
+                                    <action selector="clickRegister:" destination="xFW-0b-nZT" eventType="touchUpInside" id="981-MV-nDW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8cf-a7-IEq"/>
@@ -782,6 +791,12 @@
                     <navigationItem key="navigationItem" id="g9A-ov-a5m"/>
                     <connections>
                         <outlet property="tableView" destination="usb-bY-xnj" id="YPx-FO-1Qd"/>
+                        <outlet property="txt" destination="P9P-4u-eQb" id="B6f-Hw-l5v"/>
+                        <outlet property="txtConfirmPassword" destination="BnC-23-IZS" id="HEi-h8-FhY"/>
+                        <outlet property="txtEmail" destination="iQC-Bu-zo3" id="Hd1-DU-HGB"/>
+                        <outlet property="txtMobileNo" destination="eYQ-7P-DIG" id="lQb-uo-YPv"/>
+                        <outlet property="txtName" destination="P9P-4u-eQb" id="iik-XO-DbF"/>
+                        <outlet property="txtPassword" destination="fjv-Zg-QtB" id="RsH-hX-ZYp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mU3-6T-bIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -791,10 +806,9 @@
         <!--Navigation Controller-->
         <scene sceneID="Eer-wg-f0i">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lkb-C4-McT" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lkb-C4-McT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qFk-kh-NDD">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

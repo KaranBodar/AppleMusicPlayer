@@ -14,6 +14,10 @@
 		256A65FC2DB10CD50040E594 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A65FB2DB10CD50040E594 /* MainVC.swift */; };
 		258D1BAF2DB11EC1004703B9 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258D1BAE2DB11EC1004703B9 /* RegisterVC.swift */; };
 		25E8DB602DB34E4600404C1E /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8DB5F2DB34E4600404C1E /* SettingsVC.swift */; };
+		25E8FCD82DB3BD51005A8B22 /* TV Off.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25E8FCD72DB3BD51005A8B22 /* TV Off.mp3 */; };
+		25E8FCDA2DB3BE1D005A8B22 /* Illuminati.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25E8FCD92DB3BE1D005A8B22 /* Illuminati.mp3 */; };
+		25E8FCDC2DB3BF6D005A8B22 /* Not Like Us.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25E8FCDB2DB3BF6D005A8B22 /* Not Like Us.mp3 */; };
+		25E8FCDE2DB3C202005A8B22 /* MANIAC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25E8FCDD2DB3C202005A8B22 /* MANIAC.mp3 */; };
 		25EDB4F82DAD09750028684C /* Payal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EDB4F72DAD09750028684C /* Payal.mp3 */; };
 		25EDB4F92DAD09750028684C /* Millioner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EDB4F62DAD09750028684C /* Millioner.mp3 */; };
 		25EDB4FA2DAD09750028684C /* GoodBoy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EDB4F42DAD09750028684C /* GoodBoy.mp3 */; };
@@ -61,6 +65,10 @@
 		256A65FB2DB10CD50040E594 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		258D1BAE2DB11EC1004703B9 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		25E8DB5F2DB34E4600404C1E /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		25E8FCD72DB3BD51005A8B22 /* TV Off.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "TV Off.mp3"; sourceTree = "<group>"; };
+		25E8FCD92DB3BE1D005A8B22 /* Illuminati.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Illuminati.mp3; sourceTree = "<group>"; };
+		25E8FCDB2DB3BF6D005A8B22 /* Not Like Us.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Not Like Us.mp3"; sourceTree = "<group>"; };
+		25E8FCDD2DB3C202005A8B22 /* MANIAC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MANIAC.mp3; sourceTree = "<group>"; };
 		25EDB4F42DAD09750028684C /* GoodBoy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GoodBoy.mp3; sourceTree = "<group>"; };
 		25EDB4F52DAD09750028684C /* BigDawgs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BigDawgs.mp3; sourceTree = "<group>"; };
 		25EDB4F62DAD09750028684C /* Millioner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Millioner.mp3; sourceTree = "<group>"; };
@@ -116,7 +124,11 @@
 			isa = PBXGroup;
 			children = (
 				25EDB4F42DAD09750028684C /* GoodBoy.mp3 */,
+				25E8FCDD2DB3C202005A8B22 /* MANIAC.mp3 */,
+				25E8FCD92DB3BE1D005A8B22 /* Illuminati.mp3 */,
+				25E8FCDB2DB3BF6D005A8B22 /* Not Like Us.mp3 */,
 				25EDB4F52DAD09750028684C /* BigDawgs.mp3 */,
+				25E8FCD72DB3BD51005A8B22 /* TV Off.mp3 */,
 				25EDB4F62DAD09750028684C /* Millioner.mp3 */,
 				25EDB4F72DAD09750028684C /* Payal.mp3 */,
 			);
@@ -333,14 +345,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E8FCD82DB3BD51005A8B22 /* TV Off.mp3 in Resources */,
 				25F4FE6F2DACF2C6007F90F9 /* Assets.xcassets in Resources */,
 				25EDB5052DAD1E900028684C /* XIBCell1.xib in Resources */,
 				2559D30A2DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib in Resources */,
 				25F4FE712DACF2C6007F90F9 /* LaunchScreen.storyboard in Resources */,
 				25EDB4F82DAD09750028684C /* Payal.mp3 in Resources */,
+				25E8FCDA2DB3BE1D005A8B22 /* Illuminati.mp3 in Resources */,
 				25EDB4F92DAD09750028684C /* Millioner.mp3 in Resources */,
 				251525B82DB26A4A00260204 /* PlayList.storyboard in Resources */,
+				25E8FCDE2DB3C202005A8B22 /* MANIAC.mp3 in Resources */,
 				25EDB4FA2DAD09750028684C /* GoodBoy.mp3 in Resources */,
+				25E8FCDC2DB3BF6D005A8B22 /* Not Like Us.mp3 in Resources */,
 				25EDB4FB2DAD09750028684C /* BigDawgs.mp3 in Resources */,
 				25F4FE722DACF2C6007F90F9 /* Main.storyboard in Resources */,
 			);

@@ -25,7 +25,7 @@ class PlayerVC: UIViewController {
     public var songs: [Song] = []
     var player: AVAudioPlayer?
     var progressTimer: Timer?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -76,7 +76,7 @@ class PlayerVC: UIViewController {
     }
     @objc func updateSlider() {
         guard let player = player else { return }
-
+        
         SongProgressSlider.maximumValue = Float(player.duration)
         SongProgressSlider.value = Float(player.currentTime)
         
@@ -87,7 +87,7 @@ class PlayerVC: UIViewController {
     @objc func didSlideProgress(_ slider: UISlider) {
         player?.currentTime = TimeInterval(slider.value)
     }
-
+    
     // MARK: - override func -
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -95,7 +95,7 @@ class PlayerVC: UIViewController {
         if let player = player {
             player.stop()
             progressTimer?.invalidate()
-
+            
         }
     }
     //MARK: - Functions -
@@ -103,10 +103,7 @@ class PlayerVC: UIViewController {
         //SetUp Player
         let song = songs[position]
         guard
-            let urlString = Bundle.main.path(
-                forResource: song.trackName,
-                ofType: "mp3"
-            )
+            let urlString = Bundle.main.path(forResource: song.trackName,ofType: "mp3")
         else {
             print("Audio file not found: \(song.trackName).mp3")
             return
@@ -132,8 +129,7 @@ class PlayerVC: UIViewController {
         self.lblArtistName.text = song.artistName
         self.imgSongImage.image = UIImage(named: song.imageName)
         self.VolumeControl.value = 0.5
-        self.VolumeControl.addTarget(
-        self,action: #selector(didSlideSlider(_:)),for: .valueChanged)
+        self.VolumeControl.addTarget(self,action: #selector(didSlideSlider(_:)),for: .valueChanged)
         SongProgressSlider.maximumValue = Float(player?.duration ?? 1.0)
         SongProgressSlider.value = 0.0
         SongProgressSlider.addTarget(self, action: #selector(didSlideProgress(_:)), for: .valueChanged)
@@ -151,22 +147,22 @@ class PlayerVC: UIViewController {
             print("Audio file not found")
             return
         }
-
+        
         do {
             let url = URL(fileURLWithPath: path)
             player = try AVAudioPlayer(contentsOf: url)
             player?.volume = VolumeControl.value
             player?.prepareToPlay()
             player?.play()
-
+            
             // Timer for slider sync
             progressTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateSlider), userInfo: nil, repeats: true)
-
+            
         } catch {
             print("Error loading player.")
             return
         }
-
+        
         // Update UI
         lblSongName.text = song.name
         lblAlbumName.text = song.albumName
@@ -178,9 +174,9 @@ class PlayerVC: UIViewController {
         lblDuration.text = formatTime(player?.duration ?? 0.0)
     }
     func formatTime(_ time: TimeInterval) -> String {
-            let minutes = Int(time) / 60
-            let seconds = Int(time) % 60
-            return String(format: "%d:%02d", minutes, seconds)
-        }
+        let minutes = Int(time) / 60
+        let seconds = Int(time) % 60
+        return String(format: "%d:%02d", minutes, seconds)
+    }
     
 }

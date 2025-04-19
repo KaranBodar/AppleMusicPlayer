@@ -75,5 +75,9 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.song.append(Song(name: "Payal", albumName: "Glory", artistName: "Peradox", imageName: "Paradox", trackName: "Payal"))
         self.song.append(Song(name: "GoodBoy", albumName: "Glory", artistName: "Emiway Batai", imageName: "Emiway", trackName: "GoodBoy"))
         self.song.append(Song(name: "BigDawgs", albumName: "None", artistName: "Hanumankind", imageName: "Hnumankind", trackName: "BigDawgs"))
+        self.song.append(Song(name: "Maniac", albumName: "None", artistName: "Yoyo Honey Singh", imageName: "MANIAC", trackName: "MANIAC"))
+        self.song.append(Song(name: "TV Off", albumName: "None", artistName: "Kendrick Lamar", imageName: "KendrickLamar", trackName: "TV Off"))
+        self.song.append(Song(name: "Illuminati", albumName: "Aavesham", artistName: "Sushin Shyam", imageName: "Illuminati", trackName: "Illuminati"))
+        self.song.append(Song(name: "Not Like Us", albumName: "None", artistName: "Kendrick Lamar", imageName: "KendrickLamar", trackName: "Not Like Us"))
     }
 }

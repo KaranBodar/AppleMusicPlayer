@@ -11,6 +11,8 @@ let mobileNo = UserDefaults.standard
 let email = UserDefaults.standard
 let password = UserDefaults.standard
 let confirmPassword = UserDefaults.standard
+
+
 class RegisterVC: UIViewController {
     // MARK: - IBOutlet -
     @IBOutlet weak var txtName: UITextField!
@@ -21,6 +23,7 @@ class RegisterVC: UIViewController {
     
     
     var empty = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

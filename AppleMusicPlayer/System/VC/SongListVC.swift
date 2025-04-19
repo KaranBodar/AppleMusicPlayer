@@ -31,6 +31,15 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.blureView.layer.opacity = 0.6
         self.configureSong()
     }
+    
+    // MARK: - IBAction -
+    
+    @IBAction func clickSettings(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "PlayList", bundle: nil).instantiateViewController(identifier: "SettingsVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
     // MARK: - TableView -
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.song.count

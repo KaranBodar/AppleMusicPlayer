@@ -34,8 +34,13 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - IBAction -
     
+    
+    @IBAction func clickProfile(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "ProfileSettings", bundle: nil).instantiateViewController(identifier: "ProfileVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func clickSettings(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "PlayList", bundle: nil).instantiateViewController(identifier: "SettingsVC")
+        let vc = UIStoryboard(name: "ProfileSettings", bundle: nil).instantiateViewController(identifier: "SettingsVC")
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

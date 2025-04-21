@@ -35,6 +35,10 @@ class PlayerVC: UIViewController {
     }
     // MARK: - IBActions -
     
+    @IBAction func clickProfile(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "ProfileSettings", bundle: nil).instantiateViewController(identifier: "ProfileVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     @IBAction func btnDissmis(_ sender: UIButton) {
         self.dismiss(animated: true)
     }

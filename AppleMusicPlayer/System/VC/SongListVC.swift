@@ -37,9 +37,9 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - IBAction -
     
     
-    @IBAction func clickProfile(_ sender: UIButton) {
-        let vc = UIStoryboard(name: "ProfileSettings", bundle: nil).instantiateViewController(identifier: "ProfileVC")
-        self.navigationController?.pushViewController(vc, animated: true)
+    @IBAction func clickBack(_ sender: UIButton) {
+
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func clickSettings(_ sender: UIButton) {
         let vc = UIStoryboard(name: "ProfileSettings", bundle: nil).instantiateViewController(identifier: "SettingsVC")
@@ -49,12 +49,12 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - TableView -
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.song.count
+        return self.filteredArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "XIBCell1") as! XIBCell1
-        let song = song[indexPath.row]
+        let song = filteredArray[indexPath.row]
         // Cell Properties
         cell.txtLabel?.text = song.name
         cell.txtDetailsLabel?.text = song.albumName
@@ -70,8 +70,8 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         else {
             return
         }
-        vc.songs = song
-        vc.position = position
+        vc.songs = filteredArray
+        vc.position = indexPath.row
         vc.modalPresentationStyle = .overCurrentContext
         //        vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true)
@@ -87,30 +87,37 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // MARK: - Kendrick Lamar -
 
-        Song(name: "TV Off", albumName: "None", artistName: "Kendrick Lamar", imageName: "KendrickLamar", trackName: "TV Off"),
-        Song(name: "Not Like Us", albumName: "None", artistName: "Kendrick Lamar", imageName: "KendrickLamar", trackName: "Not Like Us"),
+        Song(name: "TV Off", albumName: "None", artistName: "Kendrick Lamar", imageName: "KendrickLamar2", trackName: "TV Off"),
+        Song(name: "Not Like Us", albumName: "None", artistName: "Kendrick Lamar", imageName: "KendrickLamar2", trackName: "Not Like Us"),
         
         // MARK: - Emiway Batai -
-        Song(name: "GoodBoy", albumName: "None", artistName: "Emiway Batai", imageName: "Emiway", trackName: "GoodBoy"),
-        Song(name: "BADSHAH", albumName: "None", artistName: "Emiway Batai", imageName: "Emiway", trackName: "BADSHAH"),
+        Song(name: "GoodBoy", albumName: "None", artistName: "Emiway Bantai", imageName: "Emiway", trackName: "GoodBoy"),
+        Song(name: "BADSHAH", albumName: "None", artistName: "Emiway Bantai", imageName: "Emiway", trackName: "BADSHAH"),
         
         // MARK: - Hanumankind -
         Song(name: "BigDawgs", albumName: "None", artistName: "Hanumankind", imageName: "Hnumankind", trackName: "BigDawgs"),
         Song(name: "Run It Up", albumName: "None", artistName: "Hanumankind", imageName: "Hnumankind", trackName: "Run It Up"),
         
         // MARK: - Aditya Gadhavi -
-        Song(name: "Naagar Nandji Na Laal", albumName: "None", artistName: "Aditya gadhavi", imageName: "Aditya gadhavi2", trackName: "Naagar Nandji Na Laal"),
-        Song(name: "Kaljug No Kanaiyo ", albumName: "None", artistName: "Aditya gadhavi", imageName: "Aditya gadhavi2", trackName: "Kaljug No Kanaiyo "),
-        Song(name: "Rang Bhini Radha", albumName: "None", artistName: "Aditya gadhavi", imageName: "Aditya gadhavi2", trackName: "Rang Bhini Radha"),
+        Song(name: "Naagar Nandji Na Laal", albumName: "None", artistName: "Aditya Gadhavi", imageName: "Aditya gadhavi2", trackName: "Naagar Nandji Na Laal"),
+        Song(name: "Kaljug No Kanaiyo ", albumName: "None", artistName: "Aditya Gadhavi", imageName: "Aditya gadhavi2", trackName: "Kaljug No Kanaiyo "),
+        Song(name: "Rang Bhini Radha", albumName: "None", artistName: "Aditya Gadhavi", imageName: "Aditya gadhavi2", trackName: "Rang Bhini Radha"),
+        
+        // MARK: - Kailash Kher -
+        Song(name: "Teri Deewani", albumName: "None", artistName: "Kailash Kher", imageName: "Kailash Kher", trackName: "Teri Deewani"),
+        Song(name: "Saiyyan", albumName: "None", artistName: "Kailash Kher", imageName: "Kailash Kher", trackName: "Teri Deewani"),
+        Song(name: "Piya Ghar Aavenge", albumName: "None", artistName: "Kailash Kher", imageName: "Kailash Kher", trackName: "Teri Deewani"),
+
         
         // MARK: - Mix -
-        Song(name: "Bye Bye Bye DEADPOOL & WOLVERINE", albumName: "None", artistName: "None", imageName: "DeadPoolWolverine", trackName: "Bye Bye Bye DEADPOOL & WOLVERINE"),
-        Song(name: "Illuminati", albumName: "None", artistName: "None", imageName: "Illuminati", trackName: "Illuminati"),
+        Song(name: "Bye Bye Bye DEADPOOL & WOLVERINE", albumName: "None", artistName: "No Artist", imageName: "DeadPool", trackName: "Bye Bye Bye DEADPOOL & WOLVERINE"),
+        Song(name: "Illuminati", albumName: "None", artistName: "No Artist", imageName: "Illuminati", trackName: "Illuminati"),
         ]
         if let selectedArtist = selectedArtistsname {
-                    filteredArray = song.filter { $0.artistName == selectedArtist }
-                } else {
-                    filteredArray = song
-                }
+            filteredArray = song.filter { $0.artistName.lowercased() == selectedArtist.lowercased() }
+        } else {
+            filteredArray = song
+        }
+
     }
 }

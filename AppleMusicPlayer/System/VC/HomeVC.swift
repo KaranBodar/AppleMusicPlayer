@@ -18,13 +18,13 @@ class HomeVC: UIViewController{
     // MARK: - Variables -
     var artistArr : [Artist] = [
         Artist(name: "Yoyo HoneySingh", image: "YoyoHoneySingh"),
-        Artist(name: "HnumanKind", image: "Hnumankind"),
-        Artist(name: "Emiway", image: "Emiway"),
-        Artist(name: "KendrickLamar", image: "KendrickLamar"),
-        Artist(name: "Paradox", image: "Paradox"),
+        Artist(name: "Hanumankind", image: "Hnumankind"),
+        Artist(name: "Emiway Bantai", image: "Emiway"),
+        Artist(name: "Kendrick Lamar", image: "KendrickLamar"),
         Artist(name: "No Artist", image: "Illuminati"),
-        Artist(name: "Adity Gadhavi", image: "Adity Gadhavi"),
-        Artist(name: "Kailash khair", image: "Kailash khair")
+        Artist(name: "Aditya Gadhavi", image: "Adity Gadhavi"),
+        Artist(name: "Kailash Kher", image: "Kailash Kher")
+
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,16 @@ class HomeVC: UIViewController{
         self.setCollectionView()
     }
     
-
+    // MARK: - IBAction -
+    
+    @IBAction func clickSettings(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "ProfileSettings", bundle: nil).instantiateViewController(identifier: "SettingsVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func clickProfile(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "ProfileSettings", bundle: nil).instantiateViewController(identifier: "ProfileVC")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 
 }

@@ -14,8 +14,6 @@
 		250BB5B02DB7665400CC6FA5 /* Habibti.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5AE2DB7665400CC6FA5 /* Habibti.mp3 */; };
 		250BB5B12DB7665400CC6FA5 /* Shopping List  2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5AF2DB7665400CC6FA5 /* Shopping List  2.mp3 */; };
 		250BB5B32DB7666600CC6FA5 /* Run It Up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5B22DB7666600CC6FA5 /* Run It Up.mp3 */; };
-		250BB5B52DB7667200CC6FA5 /* BADSHAH.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5B42DB7667200CC6FA5 /* BADSHAH.mp3 */; };
-		250BB5B92DB7668400CC6FA5 /* Rang Bhini Radha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5B82DB7668400CC6FA5 /* Rang Bhini Radha.mp3 */; };
 		250BB5BA2DB7668400CC6FA5 /* Kaljug No Kanaiyo .mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5B62DB7668400CC6FA5 /* Kaljug No Kanaiyo .mp3 */; };
 		250BB5BB2DB7668400CC6FA5 /* Naagar Nandji Na Laal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5B72DB7668400CC6FA5 /* Naagar Nandji Na Laal.mp3 */; };
 		250BB5BD2DB766C200CC6FA5 /* Bye Bye Bye DEADPOOL & WOLVERINE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5BC2DB766C200CC6FA5 /* Bye Bye Bye DEADPOOL & WOLVERINE.mp3 */; };
@@ -32,6 +30,11 @@
 		25E8FCDA2DB3BE1D005A8B22 /* Illuminati.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25E8FCD92DB3BE1D005A8B22 /* Illuminati.mp3 */; };
 		25E8FCDC2DB3BF6D005A8B22 /* Not Like Us.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25E8FCDB2DB3BF6D005A8B22 /* Not Like Us.mp3 */; };
 		25E8FCDE2DB3C202005A8B22 /* MANIAC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25E8FCDD2DB3C202005A8B22 /* MANIAC.mp3 */; };
+		25EA09402DB79B9900B21E5B /* Rang Bhini Radha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EA093F2DB79B9900B21E5B /* Rang Bhini Radha.mp3 */; };
+		25EA09422DB79BFA00B21E5B /* BADSHAH.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EA09412DB79BFA00B21E5B /* BADSHAH.mp3 */; };
+		25EA09462DB79D0B00B21E5B /* Saiyyan.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EA09442DB79D0B00B21E5B /* Saiyyan.mp3 */; };
+		25EA09472DB79D0B00B21E5B /* Teri Deewani.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EA09452DB79D0B00B21E5B /* Teri Deewani.mp3 */; };
+		25EA09482DB79D0B00B21E5B /* Piya Ghar Aavenge.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EA09432DB79D0B00B21E5B /* Piya Ghar Aavenge.mp3 */; };
 		25EDB4F82DAD09750028684C /* Payal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EDB4F72DAD09750028684C /* Payal.mp3 */; };
 		25EDB4F92DAD09750028684C /* Millioner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EDB4F62DAD09750028684C /* Millioner.mp3 */; };
 		25EDB4FA2DAD09750028684C /* GoodBoy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25EDB4F42DAD09750028684C /* GoodBoy.mp3 */; };
@@ -79,10 +82,8 @@
 		250BB5AE2DB7665400CC6FA5 /* Habibti.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Habibti.mp3; sourceTree = "<group>"; };
 		250BB5AF2DB7665400CC6FA5 /* Shopping List  2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Shopping List  2.mp3"; sourceTree = "<group>"; };
 		250BB5B22DB7666600CC6FA5 /* Run It Up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Run It Up.mp3"; sourceTree = "<group>"; };
-		250BB5B42DB7667200CC6FA5 /* BADSHAH.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BADSHAH.mp3; sourceTree = "<group>"; };
 		250BB5B62DB7668400CC6FA5 /* Kaljug No Kanaiyo .mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Kaljug No Kanaiyo .mp3"; sourceTree = "<group>"; };
 		250BB5B72DB7668400CC6FA5 /* Naagar Nandji Na Laal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Naagar Nandji Na Laal.mp3"; sourceTree = "<group>"; };
-		250BB5B82DB7668400CC6FA5 /* Rang Bhini Radha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rang Bhini Radha.mp3"; sourceTree = "<group>"; };
 		250BB5BC2DB766C200CC6FA5 /* Bye Bye Bye DEADPOOL & WOLVERINE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bye Bye Bye DEADPOOL & WOLVERINE.mp3"; sourceTree = "<group>"; };
 		251525B72DB26A4900260204 /* PlayList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayList.storyboard; sourceTree = "<group>"; };
 		251525BF2DB26CE200260204 /* FlashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashScreenVC.swift; sourceTree = "<group>"; };
@@ -97,6 +98,11 @@
 		25E8FCD92DB3BE1D005A8B22 /* Illuminati.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Illuminati.mp3; sourceTree = "<group>"; };
 		25E8FCDB2DB3BF6D005A8B22 /* Not Like Us.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Not Like Us.mp3"; sourceTree = "<group>"; };
 		25E8FCDD2DB3C202005A8B22 /* MANIAC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MANIAC.mp3; sourceTree = "<group>"; };
+		25EA093F2DB79B9900B21E5B /* Rang Bhini Radha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rang Bhini Radha.mp3"; sourceTree = "<group>"; };
+		25EA09412DB79BFA00B21E5B /* BADSHAH.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BADSHAH.mp3; sourceTree = "<group>"; };
+		25EA09432DB79D0B00B21E5B /* Piya Ghar Aavenge.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Piya Ghar Aavenge.mp3"; sourceTree = "<group>"; };
+		25EA09442DB79D0B00B21E5B /* Saiyyan.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Saiyyan.mp3; sourceTree = "<group>"; };
+		25EA09452DB79D0B00B21E5B /* Teri Deewani.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Teri Deewani.mp3"; sourceTree = "<group>"; };
 		25EDB4F42DAD09750028684C /* GoodBoy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GoodBoy.mp3; sourceTree = "<group>"; };
 		25EDB4F52DAD09750028684C /* BigDawgs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BigDawgs.mp3; sourceTree = "<group>"; };
 		25EDB4F62DAD09750028684C /* Millioner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Millioner.mp3; sourceTree = "<group>"; };
@@ -152,15 +158,18 @@
 			isa = PBXGroup;
 			children = (
 				25EDB4F42DAD09750028684C /* GoodBoy.mp3 */,
+				25EA09432DB79D0B00B21E5B /* Piya Ghar Aavenge.mp3 */,
+				25EA09442DB79D0B00B21E5B /* Saiyyan.mp3 */,
+				25EA09452DB79D0B00B21E5B /* Teri Deewani.mp3 */,
 				250BB5AE2DB7665400CC6FA5 /* Habibti.mp3 */,
 				250BB5B22DB7666600CC6FA5 /* Run It Up.mp3 */,
 				250BB5AF2DB7665400CC6FA5 /* Shopping List  2.mp3 */,
-				250BB5B42DB7667200CC6FA5 /* BADSHAH.mp3 */,
 				25E8FCDD2DB3C202005A8B22 /* MANIAC.mp3 */,
 				250BB5B62DB7668400CC6FA5 /* Kaljug No Kanaiyo .mp3 */,
+				25EA09412DB79BFA00B21E5B /* BADSHAH.mp3 */,
 				250BB5BC2DB766C200CC6FA5 /* Bye Bye Bye DEADPOOL & WOLVERINE.mp3 */,
+				25EA093F2DB79B9900B21E5B /* Rang Bhini Radha.mp3 */,
 				250BB5B72DB7668400CC6FA5 /* Naagar Nandji Na Laal.mp3 */,
-				250BB5B82DB7668400CC6FA5 /* Rang Bhini Radha.mp3 */,
 				25E8FCD92DB3BE1D005A8B22 /* Illuminati.mp3 */,
 				25E8FCDB2DB3BF6D005A8B22 /* Not Like Us.mp3 */,
 				25EDB4F52DAD09750028684C /* BigDawgs.mp3 */,
@@ -389,25 +398,28 @@
 			files = (
 				25E8FCD82DB3BD51005A8B22 /* TV Off.mp3 in Resources */,
 				25F4FE6F2DACF2C6007F90F9 /* Assets.xcassets in Resources */,
+				25EA09402DB79B9900B21E5B /* Rang Bhini Radha.mp3 in Resources */,
 				25EDB5052DAD1E900028684C /* XIBCell1.xib in Resources */,
 				2559D30A2DAE0E2E000BA1D1 /* XIBArtistCollectionCell.xib in Resources */,
 				25F4FE712DACF2C6007F90F9 /* LaunchScreen.storyboard in Resources */,
 				25EDB4F82DAD09750028684C /* Payal.mp3 in Resources */,
 				25E8FCDA2DB3BE1D005A8B22 /* Illuminati.mp3 in Resources */,
 				25EDB4F92DAD09750028684C /* Millioner.mp3 in Resources */,
+				25EA09462DB79D0B00B21E5B /* Saiyyan.mp3 in Resources */,
+				25EA09472DB79D0B00B21E5B /* Teri Deewani.mp3 in Resources */,
+				25EA09482DB79D0B00B21E5B /* Piya Ghar Aavenge.mp3 in Resources */,
 				251525B82DB26A4A00260204 /* PlayList.storyboard in Resources */,
-				250BB5B52DB7667200CC6FA5 /* BADSHAH.mp3 in Resources */,
 				250BB5BD2DB766C200CC6FA5 /* Bye Bye Bye DEADPOOL & WOLVERINE.mp3 in Resources */,
 				25E8FCDE2DB3C202005A8B22 /* MANIAC.mp3 in Resources */,
 				25EDB4FA2DAD09750028684C /* GoodBoy.mp3 in Resources */,
 				25E8FCDC2DB3BF6D005A8B22 /* Not Like Us.mp3 in Resources */,
 				250BB5B02DB7665400CC6FA5 /* Habibti.mp3 in Resources */,
 				250BB5B12DB7665400CC6FA5 /* Shopping List  2.mp3 in Resources */,
+				25EA09422DB79BFA00B21E5B /* BADSHAH.mp3 in Resources */,
 				250BB5AB2DB7504900CC6FA5 /* XIBArtistCell.xib in Resources */,
 				250BB5AD2DB75E1C00CC6FA5 /* Shopping List .mp3 in Resources */,
 				258CF8932DB5E03E0002BD37 /* ProfileSettings.storyboard in Resources */,
 				25EDB4FB2DAD09750028684C /* BigDawgs.mp3 in Resources */,
-				250BB5B92DB7668400CC6FA5 /* Rang Bhini Radha.mp3 in Resources */,
 				250BB5BA2DB7668400CC6FA5 /* Kaljug No Kanaiyo .mp3 in Resources */,
 				250BB5BB2DB7668400CC6FA5 /* Naagar Nandji Na Laal.mp3 in Resources */,
 				250BB5B32DB7666600CC6FA5 /* Run It Up.mp3 in Resources */,

@@ -6,12 +6,14 @@
 //
 
 import UIKit
-let name = UserDefaults.standard
-let mobileNo = UserDefaults.standard
-let email = UserDefaults.standard
-let password = UserDefaults.standard
-let confirmPassword = UserDefaults.standard
+var name = UserDefaults.standard
+var mobileNo = UserDefaults.standard
+var email = UserDefaults.standard
+var password = UserDefaults.standard
+var confirmPassword = UserDefaults.standard
+var profileImage = UserDefaults.standard
 
+var enterName: String?
 
 class RegisterVC: UIViewController {
     // MARK: - IBOutlet -
@@ -26,12 +28,19 @@ class RegisterVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     // MARK: - IBAction -
+    
+    @IBAction func txtEnterName(_ sender: UITextField) {
+//        enterName = sender.text ?? ""
+//        UserDefaults.standard.set(enterName, forKey: "name")
+        
+    }
+    
     @IBAction func clickRegister(_ sender: UIButton) {
-        if self.txtName.text == self.empty && self.txtMobileNo.text == self.empty && self.txtEmail.text == self.empty && self.txtPassword.text == self.empty && self.txtConfirmPassword.text == self.empty {
+        if self.txtName.text == self.empty || self.txtMobileNo.text == self.empty || self.txtEmail.text == self.empty || self.txtPassword.text == self.empty || self.txtConfirmPassword.text == self.empty {
             let alert = UIAlertController(title: "Can't proceed.", message: "Fill the given fields to continue.", preferredStyle: .alert)
             let ok = UIAlertAction(title: "OK", style: .default)
             alert.addAction(ok)
@@ -43,8 +52,10 @@ class RegisterVC: UIViewController {
             password.set(true, forKey: "password")
             confirmPassword.set(true, forKey: "confirmPassword")
             let vc = UIStoryboard(name: "PlayList", bundle: nil).instantiateViewController(identifier: "SongListVC")
-//            self.navigationController?.pushViewController(vc, animated: true)
+            //            self.navigationController?.pushViewController(vc, animated: true)
             self.navigationController?.setViewControllers( [vc], animated: true)
+            enterName = self.txtName.text ?? ""
+
         }
     }
     @IBAction func clickCancle(_ sender: UIButton) {
@@ -52,5 +63,5 @@ class RegisterVC: UIViewController {
     }
     
     
-
+    
 }

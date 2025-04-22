@@ -19,7 +19,9 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var blureView: UIView!
     
     // MARK: - Variables -
-    var song = [Song] ()
+    var song : [Song] = []
+    var filteredArray: [Song] = []
+    var selectedArtistsname: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,13 +78,39 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     // MARK: - Functions -
     func configureSong() {
-        self.song.append(Song(name: "Millioner", albumName: "Glory", artistName: "Yoyo Honey Singh", imageName: "YoyoHoneySingh", trackName: "Millioner"))
-        self.song.append(Song(name: "Payal", albumName: "Glory", artistName: "Peradox", imageName: "Paradox", trackName: "Payal"))
-        self.song.append(Song(name: "GoodBoy", albumName: "Glory", artistName: "Emiway Batai", imageName: "Emiway", trackName: "GoodBoy"))
-        self.song.append(Song(name: "BigDawgs", albumName: "None", artistName: "Hanumankind", imageName: "Hnumankind", trackName: "BigDawgs"))
-        self.song.append(Song(name: "Maniac", albumName: "None", artistName: "Yoyo Honey Singh", imageName: "MANIAC", trackName: "MANIAC"))
-        self.song.append(Song(name: "TV Off", albumName: "None", artistName: "Kendrick Lamar", imageName: "KendrickLamar", trackName: "TV Off"))
-        self.song.append(Song(name: "Illuminati", albumName: "Aavesham", artistName: "Sushin Shyam", imageName: "Illuminati", trackName: "Illuminati"))
-        self.song.append(Song(name: "Not Like Us", albumName: "None", artistName: "Kendrick Lamar", imageName: "KendrickLamar", trackName: "Not Like Us"))
+        self.song = [
+        // MARK: - Yoyo HoneySingh -
+        Song(name: "Millioner", albumName: "Glory", artistName: "Yoyo HoneySingh", imageName: "MANIAC", trackName: "Millioner"),
+        Song(name: "Payal", albumName: "Glory", artistName: "Yoyo HoneySingh", imageName: "MANIAC", trackName: "Payal"),
+        Song(name: "Maniac", albumName: "None", artistName: "Yoyo HoneySingh", imageName: "MANIAC", trackName: "MANIAC"),
+        Song(name: "Habibti", albumName: "Glory", artistName: "Yoyo HoneySingh", imageName: "MANIAC", trackName: "Habibti"),
+        
+        // MARK: - Kendrick Lamar -
+
+        Song(name: "TV Off", albumName: "None", artistName: "Kendrick Lamar", imageName: "KendrickLamar", trackName: "TV Off"),
+        Song(name: "Not Like Us", albumName: "None", artistName: "Kendrick Lamar", imageName: "KendrickLamar", trackName: "Not Like Us"),
+        
+        // MARK: - Emiway Batai -
+        Song(name: "GoodBoy", albumName: "None", artistName: "Emiway Batai", imageName: "Emiway", trackName: "GoodBoy"),
+        Song(name: "BADSHAH", albumName: "None", artistName: "Emiway Batai", imageName: "Emiway", trackName: "BADSHAH"),
+        
+        // MARK: - Hanumankind -
+        Song(name: "BigDawgs", albumName: "None", artistName: "Hanumankind", imageName: "Hnumankind", trackName: "BigDawgs"),
+        Song(name: "Run It Up", albumName: "None", artistName: "Hanumankind", imageName: "Hnumankind", trackName: "Run It Up"),
+        
+        // MARK: - Aditya Gadhavi -
+        Song(name: "Naagar Nandji Na Laal", albumName: "None", artistName: "Aditya gadhavi", imageName: "Aditya gadhavi2", trackName: "Naagar Nandji Na Laal"),
+        Song(name: "Kaljug No Kanaiyo ", albumName: "None", artistName: "Aditya gadhavi", imageName: "Aditya gadhavi2", trackName: "Kaljug No Kanaiyo "),
+        Song(name: "Rang Bhini Radha", albumName: "None", artistName: "Aditya gadhavi", imageName: "Aditya gadhavi2", trackName: "Rang Bhini Radha"),
+        
+        // MARK: - Mix -
+        Song(name: "Bye Bye Bye DEADPOOL & WOLVERINE", albumName: "None", artistName: "None", imageName: "DeadPoolWolverine", trackName: "Bye Bye Bye DEADPOOL & WOLVERINE"),
+        Song(name: "Illuminati", albumName: "None", artistName: "None", imageName: "Illuminati", trackName: "Illuminati"),
+        ]
+        if let selectedArtist = selectedArtistsname {
+                    filteredArray = song.filter { $0.artistName == selectedArtist }
+                } else {
+                    filteredArray = song
+                }
     }
 }

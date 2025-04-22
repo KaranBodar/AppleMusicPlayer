@@ -15,12 +15,29 @@ class ProfileVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerD
     
     // MARK: - Variables -
     var userImage = UIImagePickerController()
+    var empty = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         self.imgProfileImage.layer.cornerRadius = self.imgProfileImage.frame.height / 2
+//        let enterName = UserDefaults.standard.string(forKey: "name") ?? "Guest"
+//        let enteremail = UserDefaults.standard.string(forKey: "email") ?? "RandomUser@gmail.com"
+//        if enterName == empty {
+//            self.lblName.text = "Hi,\(enteremail)"
+//            self.lblName.text = enterEmail
+//        } else {
+//            self.lblName.text = "Hi,\(enterName)"
+//            self.lblName.text = enterName
+//
+//        }
+        if let savedImageData = UserDefaults.standard.data(forKey: "profileImage"),
+               let savedImage = UIImage(data: savedImageData) {
+                self.imgProfileImage.image = savedImage
+            }
+        self.lblName.text = enterEmail
+        self.lblName.text = enterName
     }
     
     // MARK: - IBAction -
@@ -103,6 +120,9 @@ class ProfileVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerD
         if let imageData = info[.editedImage] ?? info[.originalImage] as? UIImage{
             if let image = imageData as? UIImage{
                 self.imgProfileImage.image = image
+                if let imageData = image.jpegData(compressionQuality: 0.8) {
+                    UserDefaults.standard.set(imageData, forKey: "profileImage")
+                }
                 self.dismiss(animated: true)
             }
         }

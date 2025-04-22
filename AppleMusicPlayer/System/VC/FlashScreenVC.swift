@@ -16,7 +16,7 @@ class FlashScreenVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if name.bool(forKey: "name") || email.bool(forKey: "email") || password.bool(forKey: "password") || confirmPassword.bool(forKey: "confirmPassword") || mobileNo.bool(forKey: "mobileNo") == true  {
                     
-                let vc = UIStoryboard(name: "PlayList", bundle: nil).instantiateViewController(identifier: "SongListVC")
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "HomeVC")
                 self.navigationController?.setViewControllers([vc], animated: true)
                 } else {
                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainVC")

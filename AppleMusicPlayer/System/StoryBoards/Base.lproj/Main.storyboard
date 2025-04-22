@@ -5,14 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppleMusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeVC" customModule="AppleMusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +48,7 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="person.circle.fill" catalog="system"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
+                                        <buttonConfiguration key="configuration" style="plain" image="person.circle.fill" catalog="system">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -78,38 +77,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g2U-x4-yUZ">
-                                <rect key="frame" x="0.0" y="115" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="115" width="375" height="552"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="23J-Ae-RDs"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1OJ-zk-cgA">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1OJ-zk-cgA">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MYT-bU-i3V">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="em6-LW-8ZH">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1X-Gj-cbN">
-                                                    <rect key="frame" x="5" y="5" width="118" height="118"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="z1X-Gj-cbN" secondAttribute="bottom" constant="5" id="2JS-Sb-tkf"/>
-                                                <constraint firstItem="z1X-Gj-cbN" firstAttribute="leading" secondItem="em6-LW-8ZH" secondAttribute="leading" constant="5" id="Cal-je-Xa8"/>
-                                                <constraint firstAttribute="trailing" secondItem="z1X-Gj-cbN" secondAttribute="trailing" constant="5" id="ju4-j6-s36"/>
-                                                <constraint firstItem="z1X-Gj-cbN" firstAttribute="top" secondItem="em6-LW-8ZH" secondAttribute="top" constant="5" id="vxd-nL-2oo"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -119,6 +95,7 @@
                             <constraint firstItem="2E5-Fh-rx4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8el-4I-9dR"/>
                             <constraint firstItem="g2U-x4-yUZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9hW-7o-jOU"/>
                             <constraint firstItem="Z5u-MM-KsG" firstAttribute="top" secondItem="2E5-Fh-rx4" secondAttribute="bottom" constant="5" id="F7m-L2-yoW"/>
+                            <constraint firstItem="g2U-x4-yUZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="H0c-ZL-vQV"/>
                             <constraint firstItem="2E5-Fh-rx4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="JQh-rM-gdO"/>
                             <constraint firstItem="Z5u-MM-KsG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dND-cd-EK8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2E5-Fh-rx4" secondAttribute="trailing" constant="20" id="eXC-t5-4eK"/>
@@ -126,12 +103,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="g2U-x4-yUZ" id="8bu-Eq-pGi"/>
+                        <outlet property="collectionView" destination="g2U-x4-yUZ" id="8IQ-DJ-WcA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-330" y="-806"/>
+            <point key="canvasLocation" x="1416.8" y="-28.335832083958024"/>
         </scene>
         <!--Flash ScreenVC-->
         <scene sceneID="a1Q-8b-Spd">
@@ -270,6 +247,9 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="txtEnterEmail:" destination="ex6-xQ-7LY" eventType="editingDidEnd" id="BHu-0d-98M"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJE-x0-Chq">
                                         <rect key="frame" x="0.0" y="64" width="335" height="34"/>
@@ -336,6 +316,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="txtEnterName:" destination="xFW-0b-nZT" eventType="editingDidEnd" id="edb-oz-EGA"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile no." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYQ-7P-DIG">
                                         <rect key="frame" x="0.0" y="64" width="335" height="34"/>
@@ -437,7 +420,6 @@
         <image name="AppIconFlashScreen" width="500" height="500"/>
         <image name="LogInBG" width="675" height="1200"/>
         <image name="MainBG" width="408" height="728"/>
-        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">

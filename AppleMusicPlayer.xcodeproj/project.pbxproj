@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250BB5A72DB74FE000CC6FA5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250BB5A62DB74FE000CC6FA5 /* HomeVC.swift */; };
+		250BB5AA2DB7504900CC6FA5 /* XIBArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250BB5A82DB7504900CC6FA5 /* XIBArtistCell.swift */; };
+		250BB5AB2DB7504900CC6FA5 /* XIBArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5A92DB7504900CC6FA5 /* XIBArtistCell.xib */; };
+		250BB5AD2DB75E1C00CC6FA5 /* Shopping List .mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5AC2DB75E1C00CC6FA5 /* Shopping List .mp3 */; };
+		250BB5B02DB7665400CC6FA5 /* Habibti.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5AE2DB7665400CC6FA5 /* Habibti.mp3 */; };
+		250BB5B12DB7665400CC6FA5 /* Shopping List  2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5AF2DB7665400CC6FA5 /* Shopping List  2.mp3 */; };
+		250BB5B32DB7666600CC6FA5 /* Run It Up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5B22DB7666600CC6FA5 /* Run It Up.mp3 */; };
+		250BB5B52DB7667200CC6FA5 /* BADSHAH.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5B42DB7667200CC6FA5 /* BADSHAH.mp3 */; };
+		250BB5B92DB7668400CC6FA5 /* Rang Bhini Radha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5B82DB7668400CC6FA5 /* Rang Bhini Radha.mp3 */; };
+		250BB5BA2DB7668400CC6FA5 /* Kaljug No Kanaiyo .mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5B62DB7668400CC6FA5 /* Kaljug No Kanaiyo .mp3 */; };
+		250BB5BB2DB7668400CC6FA5 /* Naagar Nandji Na Laal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5B72DB7668400CC6FA5 /* Naagar Nandji Na Laal.mp3 */; };
+		250BB5BD2DB766C200CC6FA5 /* Bye Bye Bye DEADPOOL & WOLVERINE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 250BB5BC2DB766C200CC6FA5 /* Bye Bye Bye DEADPOOL & WOLVERINE.mp3 */; };
 		251525B82DB26A4A00260204 /* PlayList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251525B72DB26A4900260204 /* PlayList.storyboard */; };
 		251525C02DB26CE200260204 /* FlashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251525BF2DB26CE200260204 /* FlashScreenVC.swift */; };
 		2559D3092DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2559D3072DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift */; };
@@ -60,6 +72,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		250BB5A62DB74FE000CC6FA5 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		250BB5A82DB7504900CC6FA5 /* XIBArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBArtistCell.swift; sourceTree = "<group>"; };
+		250BB5A92DB7504900CC6FA5 /* XIBArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XIBArtistCell.xib; sourceTree = "<group>"; };
+		250BB5AC2DB75E1C00CC6FA5 /* Shopping List .mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Shopping List .mp3"; sourceTree = "<group>"; };
+		250BB5AE2DB7665400CC6FA5 /* Habibti.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Habibti.mp3; sourceTree = "<group>"; };
+		250BB5AF2DB7665400CC6FA5 /* Shopping List  2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Shopping List  2.mp3"; sourceTree = "<group>"; };
+		250BB5B22DB7666600CC6FA5 /* Run It Up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Run It Up.mp3"; sourceTree = "<group>"; };
+		250BB5B42DB7667200CC6FA5 /* BADSHAH.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BADSHAH.mp3; sourceTree = "<group>"; };
+		250BB5B62DB7668400CC6FA5 /* Kaljug No Kanaiyo .mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Kaljug No Kanaiyo .mp3"; sourceTree = "<group>"; };
+		250BB5B72DB7668400CC6FA5 /* Naagar Nandji Na Laal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Naagar Nandji Na Laal.mp3"; sourceTree = "<group>"; };
+		250BB5B82DB7668400CC6FA5 /* Rang Bhini Radha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rang Bhini Radha.mp3"; sourceTree = "<group>"; };
+		250BB5BC2DB766C200CC6FA5 /* Bye Bye Bye DEADPOOL & WOLVERINE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bye Bye Bye DEADPOOL & WOLVERINE.mp3"; sourceTree = "<group>"; };
 		251525B72DB26A4900260204 /* PlayList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayList.storyboard; sourceTree = "<group>"; };
 		251525BF2DB26CE200260204 /* FlashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashScreenVC.swift; sourceTree = "<group>"; };
 		2559D3072DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XIBArtistCollectionCell.swift; sourceTree = "<group>"; };
@@ -128,12 +152,21 @@
 			isa = PBXGroup;
 			children = (
 				25EDB4F42DAD09750028684C /* GoodBoy.mp3 */,
+				250BB5AE2DB7665400CC6FA5 /* Habibti.mp3 */,
+				250BB5B22DB7666600CC6FA5 /* Run It Up.mp3 */,
+				250BB5AF2DB7665400CC6FA5 /* Shopping List  2.mp3 */,
+				250BB5B42DB7667200CC6FA5 /* BADSHAH.mp3 */,
 				25E8FCDD2DB3C202005A8B22 /* MANIAC.mp3 */,
+				250BB5B62DB7668400CC6FA5 /* Kaljug No Kanaiyo .mp3 */,
+				250BB5BC2DB766C200CC6FA5 /* Bye Bye Bye DEADPOOL & WOLVERINE.mp3 */,
+				250BB5B72DB7668400CC6FA5 /* Naagar Nandji Na Laal.mp3 */,
+				250BB5B82DB7668400CC6FA5 /* Rang Bhini Radha.mp3 */,
 				25E8FCD92DB3BE1D005A8B22 /* Illuminati.mp3 */,
 				25E8FCDB2DB3BF6D005A8B22 /* Not Like Us.mp3 */,
 				25EDB4F52DAD09750028684C /* BigDawgs.mp3 */,
 				25E8FCD72DB3BD51005A8B22 /* TV Off.mp3 */,
 				25EDB4F62DAD09750028684C /* Millioner.mp3 */,
+				250BB5AC2DB75E1C00CC6FA5 /* Shopping List .mp3 */,
 				25EDB4F72DAD09750028684C /* Payal.mp3 */,
 			);
 			path = Audio;
@@ -189,6 +222,7 @@
 		25F4FE7F2DACF2D0007F90F9 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				250BB5A62DB74FE000CC6FA5 /* HomeVC.swift */,
 				25E8DB5F2DB34E4600404C1E /* SettingsVC.swift */,
 				258CF8942DB5EC630002BD37 /* ProfileVC.swift */,
 				25F798932DB11C2E00BD7B7B /* LoginVC.swift */,
@@ -208,6 +242,8 @@
 			children = (
 				25F4FE682DACF2C6007F90F9 /* LaunchScreen.storyboard */,
 				25F4FE6A2DACF2C6007F90F9 /* Main.storyboard */,
+				250BB5A82DB7504900CC6FA5 /* XIBArtistCell.swift */,
+				250BB5A92DB7504900CC6FA5 /* XIBArtistCell.xib */,
 				251525B72DB26A4900260204 /* PlayList.storyboard */,
 				258CF8922DB5E03E0002BD37 /* ProfileSettings.storyboard */,
 				2559D3072DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift */,
@@ -360,11 +396,21 @@
 				25E8FCDA2DB3BE1D005A8B22 /* Illuminati.mp3 in Resources */,
 				25EDB4F92DAD09750028684C /* Millioner.mp3 in Resources */,
 				251525B82DB26A4A00260204 /* PlayList.storyboard in Resources */,
+				250BB5B52DB7667200CC6FA5 /* BADSHAH.mp3 in Resources */,
+				250BB5BD2DB766C200CC6FA5 /* Bye Bye Bye DEADPOOL & WOLVERINE.mp3 in Resources */,
 				25E8FCDE2DB3C202005A8B22 /* MANIAC.mp3 in Resources */,
 				25EDB4FA2DAD09750028684C /* GoodBoy.mp3 in Resources */,
 				25E8FCDC2DB3BF6D005A8B22 /* Not Like Us.mp3 in Resources */,
+				250BB5B02DB7665400CC6FA5 /* Habibti.mp3 in Resources */,
+				250BB5B12DB7665400CC6FA5 /* Shopping List  2.mp3 in Resources */,
+				250BB5AB2DB7504900CC6FA5 /* XIBArtistCell.xib in Resources */,
+				250BB5AD2DB75E1C00CC6FA5 /* Shopping List .mp3 in Resources */,
 				258CF8932DB5E03E0002BD37 /* ProfileSettings.storyboard in Resources */,
 				25EDB4FB2DAD09750028684C /* BigDawgs.mp3 in Resources */,
+				250BB5B92DB7668400CC6FA5 /* Rang Bhini Radha.mp3 in Resources */,
+				250BB5BA2DB7668400CC6FA5 /* Kaljug No Kanaiyo .mp3 in Resources */,
+				250BB5BB2DB7668400CC6FA5 /* Naagar Nandji Na Laal.mp3 in Resources */,
+				250BB5B32DB7666600CC6FA5 /* Run It Up.mp3 in Resources */,
 				25F4FE722DACF2C6007F90F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,8 +445,10 @@
 				25F4FE752DACF2C6007F90F9 /* SceneDelegate.swift in Sources */,
 				2559D3092DAE0E2E000BA1D1 /* XIBArtistCollectionCell.swift in Sources */,
 				25F4FE762DACF2C6007F90F9 /* ViewController.swift in Sources */,
+				250BB5A72DB74FE000CC6FA5 /* HomeVC.swift in Sources */,
 				25EDB5042DAD1E900028684C /* XIBCell1.swift in Sources */,
 				258D1BAF2DB11EC1004703B9 /* RegisterVC.swift in Sources */,
+				250BB5AA2DB7504900CC6FA5 /* XIBArtistCell.swift in Sources */,
 				251525C02DB26CE200260204 /* FlashScreenVC.swift in Sources */,
 				25EDB4FD2DAD09FC0028684C /* SongListVC.swift in Sources */,
 				25EDB5072DAD20C10028684C /* PlayerVC.swift in Sources */,

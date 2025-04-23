@@ -21,9 +21,9 @@ class HomeVC: UIViewController{
         Artist(name: "Hanumankind", image: "Hnumankind"),
         Artist(name: "Emiway Bantai", image: "Emiway"),
         Artist(name: "Kendrick Lamar", image: "KendrickLamar"),
-        Artist(name: "No Artist", image: "Illuminati"),
         Artist(name: "Aditya Gadhavi", image: "Adity Gadhavi"),
-        Artist(name: "Kailash Kher", image: "Kailash Kher")
+        Artist(name: "Kailash Kher", image: "Kailash Kher"),
+        Artist(name: "Mix Album", image: "Illuminati"),
 
     ]
     override func viewDidLoad() {

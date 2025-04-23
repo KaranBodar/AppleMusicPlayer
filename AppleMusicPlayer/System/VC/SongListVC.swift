@@ -73,17 +73,17 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         vc.songs = filteredArray
         vc.position = indexPath.row
         vc.modalPresentationStyle = .overCurrentContext
-        //        vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true)
     }
     // MARK: - Functions -
     func configureSong() {
         self.song = [
         // MARK: - Yoyo HoneySingh -
-        Song(name: "Millioner", albumName: "Glory", artistName: "Yoyo HoneySingh", imageName: "MANIAC", trackName: "Millioner"),
-        Song(name: "Payal", albumName: "Glory", artistName: "Yoyo HoneySingh", imageName: "MANIAC", trackName: "Payal"),
-        Song(name: "Maniac", albumName: "None", artistName: "Yoyo HoneySingh", imageName: "MANIAC", trackName: "MANIAC"),
-        Song(name: "Habibti", albumName: "Glory", artistName: "Yoyo HoneySingh", imageName: "MANIAC", trackName: "Habibti"),
+        Song(name: "Millioner", albumName: "Glory", artistName: "Yoyo HoneySingh", imageName: "HoneySingh2", trackName: "Millioner"),
+        Song(name: "Payal", albumName: "Glory", artistName: "Yoyo HoneySingh", imageName: "HoneySingh2", trackName: "Payal"),
+        Song(name: "Maniac", albumName: "None", artistName: "Yoyo HoneySingh", imageName: "HoneySingh2", trackName: "MANIAC"),
+        Song(name: "Habibti", albumName: "Glory", artistName: "Yoyo HoneySingh", imageName: "HoneySingh2", trackName: "Habibti"),
+        Song(name: "Shopping List ", albumName: "Glory", artistName: "Yoyo HoneySingh", imageName: "HoneySingh2", trackName: "Shopping List "),
         
         // MARK: - Kendrick Lamar -
 
@@ -100,18 +100,20 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // MARK: - Aditya Gadhavi -
         Song(name: "Naagar Nandji Na Laal", albumName: "None", artistName: "Aditya Gadhavi", imageName: "Aditya gadhavi2", trackName: "Naagar Nandji Na Laal"),
-        Song(name: "Kaljug No Kanaiyo ", albumName: "None", artistName: "Aditya Gadhavi", imageName: "Aditya gadhavi2", trackName: "Kaljug No Kanaiyo "),
+        Song(name: "Kaljug No Kanaiyo", albumName: "None", artistName: "Aditya Gadhavi", imageName: "Aditya gadhavi2", trackName: "Kaljug No Kanaiyo"),
         Song(name: "Rang Bhini Radha", albumName: "None", artistName: "Aditya Gadhavi", imageName: "Aditya gadhavi2", trackName: "Rang Bhini Radha"),
         
         // MARK: - Kailash Kher -
-        Song(name: "Teri Deewani", albumName: "None", artistName: "Kailash Kher", imageName: "Kailash Kher", trackName: "Teri Deewani"),
-        Song(name: "Saiyyan", albumName: "None", artistName: "Kailash Kher", imageName: "Kailash Kher", trackName: "Teri Deewani"),
-        Song(name: "Piya Ghar Aavenge", albumName: "None", artistName: "Kailash Kher", imageName: "Kailash Kher", trackName: "Teri Deewani"),
+        Song(name: "Teri Deewani", albumName: "None", artistName: "Kailash Kher", imageName: "Kailash Kher2", trackName: "Teri Deewani"),
+        Song(name: "Saiyyan", albumName: "None", artistName: "Kailash Kher", imageName: "Kailash Kher2", trackName: "Saiyyan"),
+        Song(name: "Piya Ghar Aavenge", albumName: "None", artistName: "Kailash Kher", imageName: "Kailash Kher2", trackName: "Piya Ghar Aavenge"),
 
         
         // MARK: - Mix -
-        Song(name: "Bye Bye Bye DEADPOOL & WOLVERINE", albumName: "None", artistName: "No Artist", imageName: "DeadPool", trackName: "Bye Bye Bye DEADPOOL & WOLVERINE"),
-        Song(name: "Illuminati", albumName: "None", artistName: "No Artist", imageName: "Illuminati", trackName: "Illuminati"),
+        Song(name: "Bye Bye Bye DEADPOOL & WOLVERINE", albumName: "None", artistName: "Mix Album", imageName: "DeadPool", trackName: "Bye Bye Bye DEADPOOL & WOLVERINE"),
+        Song(name: "Illuminati", albumName: "None", artistName: "Mix Album", imageName: "Illuminati", trackName: "Illuminati"),
+        Song(name: "DesiHood", albumName: "None", artistName: "Mix Album", imageName: "DesiHood", trackName: "DesiHood"),
+        Song(name: "Tony's Myhem", albumName: "None", artistName: "Mix Album", imageName: "Tony's Myhem", trackName: "Tony's Myhem"),
         ]
         if let selectedArtist = selectedArtistsname {
             filteredArray = song.filter { $0.artistName.lowercased() == selectedArtist.lowercased() }

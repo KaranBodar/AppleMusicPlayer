@@ -226,8 +226,8 @@
                                             <constraint firstItem="Vdo-JZ-8iQ" firstAttribute="centerY" secondItem="pOy-tq-ifn" secondAttribute="centerY" id="lTO-7o-UQS"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SongName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrc-iM-aGX">
-                                        <rect key="frame" x="120.5" y="286" width="134" height="31.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="SongName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zrc-iM-aGX">
+                                        <rect key="frame" x="20" y="286" width="335" height="31.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -287,6 +287,7 @@
                                     <constraint firstItem="QH8-XS-Aoa" firstAttribute="leading" secondItem="KZT-Nf-Eja" secondAttribute="leading" constant="20" symbolic="YES" id="ONn-Pg-fXq"/>
                                     <constraint firstItem="BAP-wN-q0w" firstAttribute="leading" secondItem="KZT-Nf-Eja" secondAttribute="leading" constant="20" symbolic="YES" id="QPo-2G-9kq"/>
                                     <constraint firstAttribute="bottom" secondItem="ckq-CN-YaK" secondAttribute="bottom" constant="58" id="V52-xQ-0EN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zrc-iM-aGX" secondAttribute="trailing" constant="20" id="WJd-K1-xON"/>
                                     <constraint firstItem="Zrc-iM-aGX" firstAttribute="top" secondItem="RgR-Ur-CUb" secondAttribute="bottom" constant="23" id="XNl-Mf-aiH"/>
                                     <constraint firstAttribute="trailing" secondItem="ckq-CN-YaK" secondAttribute="trailing" constant="20" symbolic="YES" id="Z2m-BI-mOD"/>
                                     <constraint firstItem="ckq-CN-YaK" firstAttribute="top" secondItem="pOy-tq-ifn" secondAttribute="bottom" constant="8" symbolic="YES" id="aCo-8y-MWn"/>
@@ -295,6 +296,7 @@
                                     <constraint firstItem="S1y-WJ-d5w" firstAttribute="top" secondItem="BAP-wN-q0w" secondAttribute="bottom" constant="8" symbolic="YES" id="mHZ-BB-ySR"/>
                                     <constraint firstItem="RgR-Ur-CUb" firstAttribute="centerX" secondItem="KZT-Nf-Eja" secondAttribute="centerX" id="mcD-uk-TEZ"/>
                                     <constraint firstAttribute="trailing" secondItem="pOy-tq-ifn" secondAttribute="trailing" constant="20" symbolic="YES" id="xeo-Dh-UL6"/>
+                                    <constraint firstItem="Zrc-iM-aGX" firstAttribute="leading" secondItem="KZT-Nf-Eja" secondAttribute="leading" constant="20" id="yV6-x5-tUj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -432,10 +434,10 @@
                             <constraint firstItem="Ye0-MJ-iii" firstAttribute="top" secondItem="Z1n-za-qus" secondAttribute="bottom" constant="8" id="OjD-R3-Wf6"/>
                             <constraint firstItem="Ye0-MJ-iii" firstAttribute="leading" secondItem="6zH-gC-yJL" secondAttribute="leading" id="OoC-RR-nDf"/>
                             <constraint firstItem="6kk-xM-ihi" firstAttribute="top" secondItem="uJM-5D-fds" secondAttribute="top" id="X2x-dO-8lt"/>
-                            <constraint firstItem="Ye0-MJ-iii" firstAttribute="bottom" secondItem="6zH-gC-yJL" secondAttribute="bottom" id="XPC-xX-Sdg"/>
                             <constraint firstItem="6kk-xM-ihi" firstAttribute="leading" secondItem="6zH-gC-yJL" secondAttribute="leading" id="bzd-bH-oZ1"/>
                             <constraint firstItem="Z1n-za-qus" firstAttribute="leading" secondItem="6zH-gC-yJL" secondAttribute="leading" constant="20" id="caB-DZ-EuN"/>
                             <constraint firstItem="4m6-uh-fyR" firstAttribute="leading" secondItem="6zH-gC-yJL" secondAttribute="leading" constant="20" id="fWr-sm-YfB"/>
+                            <constraint firstAttribute="bottom" secondItem="Ye0-MJ-iii" secondAttribute="bottom" id="klg-Zw-hRa"/>
                             <constraint firstItem="6zH-gC-yJL" firstAttribute="trailing" secondItem="4m6-uh-fyR" secondAttribute="trailing" constant="20" id="mp2-nc-Kfv"/>
                             <constraint firstItem="TZG-uP-KMG" firstAttribute="trailing" secondItem="6zH-gC-yJL" secondAttribute="trailing" id="qcH-d6-dwJ"/>
                             <constraint firstItem="TZG-uP-KMG" firstAttribute="leading" secondItem="6zH-gC-yJL" secondAttribute="leading" id="qkA-p3-5SY"/>

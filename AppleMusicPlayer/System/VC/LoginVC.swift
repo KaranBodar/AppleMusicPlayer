@@ -37,8 +37,7 @@ class LoginVC: UIViewController {
         } else {
             email.set(true, forKey: "email")
             password.set(true, forKey: "password")
-            let vc = UIStoryboard(name: "PlayList", bundle: nil).instantiateViewController(identifier: "SongListVC")
-            //            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = UIStoryboard(name: "PlayList", bundle: nil).instantiateViewController(identifier: "HomeVC")
             self.navigationController?.setViewControllers( [vc], animated: true)
             enterEmail = self.txtEmail.text!
         }

@@ -69,8 +69,9 @@
                                     <constraint firstItem="pNJ-Y3-VIl" firstAttribute="centerY" secondItem="K9B-nu-SPc" secondAttribute="centerY" id="tSm-e1-QYD"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKJ-Sn-ORR">
-                                <rect key="frame" x="87.5" y="99" width="200" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iKJ-Sn-ORR">
+                                <rect key="frame" x="87.5" y="99.5" width="200" height="199"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="4G6-1k-brN"/>
                                     <constraint firstAttribute="height" constant="200" id="Z0V-8U-c03"/>
